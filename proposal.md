@@ -7,7 +7,8 @@ Team Name: cs cube
 
 Team Member:
 Yu Hao Chang (Eason),
-Andy Xia
+Andy Xia,
+Edwin Ambing
 
 
 
