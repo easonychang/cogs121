@@ -1,12 +1,12 @@
 Project Proposal
 ====
 
-Github:
+Github: https://github.com/easonychang/cogs121/
 
-Team Name: 
+Team Name: cs cube
 
 Team Member:
-Yu Hao Chang (Eason)
+Yu Hao Chang (Eason),
 Andy Xia
 
 
