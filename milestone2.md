@@ -39,6 +39,12 @@ A mockup of our Spotify Mood webapp showing the Home Page, the Mood Page that de
 
 ![Image of Prototype 2-1](https://github.com/easonychang/cogs121/blob/master/public/images/Milestone2/Prototype2-1.jpg)
 
+Home Page
+
 ![Image of Prototype 2-2](https://github.com/easonychang/cogs121/blob/master/public/images/Milestone2/Prototype2-2.jpg)
 
+Mood Page
+
 ![Image of Prototype 2-3](https://github.com/easonychang/cogs121/blob/master/public/images/Milestone2/Prototype2-3.jpg)
+
+Recommendation Page
