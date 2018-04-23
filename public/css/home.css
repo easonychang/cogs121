@@ -1,0 +1,70 @@
+/* top navigation bar */
+
+.topnav{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: mediumseagreen;
+
+    display: inline-block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+ulbot{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: mediumseagreen;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+    
+    display: inline-block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#user {
+    margin: auto;
+    max-width: 100%;
+    text-align: left;
+    height: auto;
+}
+
+.userphoto{
+    border-radius: 50%;
+    width: 60px;
+}
+
+.songRecs{
+    width: 100%;
+    height: 100%;
+    margin: 15;
+}
+
+.song{
+    width: 100%;
+    height: 20%;
+    max-height: 15%;
+    max-width: 100%;
+    padding-bottom: 2%;
+    overflow:auto
+}
