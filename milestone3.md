@@ -16,6 +16,6 @@ For the mood page, however, I decided that it may be best to focus solely on the
 
 ## Playlist
 
-![Image of Playlist Page]()
+![Image of Playlist Page](https://github.com/easonychang/cogs121/blob/master/public/images/Milestone3/playlistpage.png)
 
 This is the playlist page. It will contain a generated playlist of songs to fit the chosen mood. Soon there will be buttons to allow users to save the playlist to Spotify, edit the playlist, and generate a new playlist.
