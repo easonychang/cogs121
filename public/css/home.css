@@ -1,5 +1,6 @@
 .topnav{
-    text-align: center;
+    overflow: hidden;
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: mediumseagreen;
@@ -10,9 +11,7 @@
     text-decoration: none;
 }
 
-.bottomnav{
-    text-align: center;
-}
+
 
 ul {
     list-style-type: none;
@@ -20,10 +19,12 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    display: inline-block;
+    
 }
 
-
+li {
+    float: left;
+}
 
 ulbot{
     list-style-type: none;
