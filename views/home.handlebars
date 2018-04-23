@@ -1,16 +1,77 @@
 <html>
 <head>
 	<title>Home</title>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    	<!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	
+	<!-- Font Awesome -->
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    
+    	<!-- CSS -->
+	<link href='/css/home.css' rel="stylesheet">
+
+	
+	
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <!-- JS -->
+    <script src='/js/getSong.js'></script>
+
+    
 </head>
 <body>
+    
+    <ul class ="topnav">
+        <li> HOME </li>
+        <li><a href="/setting"><i class="fas fa-cog"></i></a></li>
+    </ul>
+    
+    <ulbot class="bottomnav">
+        <li><a href="/mood"> <i class="far fa-smile"></i></a></li>
+        <li><a href="/home"><i class="fas fa-home"></i></a></li>
+        <li><a href="/playlists"><i class="fas fa-music"></i></a></li>
+    </ulbot>
+    <div style="padding-bottom: 60px;">
+    </div>
+    
+    <div class= "welcome">
+			<div id="user">
+				<img sr class="userphoto">
+                <i class="fas fa-user-circle fa-3x" aria-hidden='true' id="icon"></i>
+                <h4 style="padding-left: 15"> Welcome back user!</h4>
+                <h5 style="padding-left: 15; padding-bottom: 30"> Why so happy?</h5>
+                <a href="/getSong" class="btn btn-primary">Get Song!</a>
+            </div>
+            
+        <div class="songRecs">
+            <div class= "song">
+                <img src="" class = "userphoto"><p style="padding-left: 100px">  song title... song length </p>
+            </div>
+            <div class= "song">
+                <img src="" class = "userphoto"><p style="padding-left: 100px"> song title... song length </p>
+            </div>
+            <div class= "song">
+                <img src="" class = "userphoto"><p style="padding-left: 100px"> song title... song length </p>
+            </div>
+            <div class= "song">
+                <img src="" class = "userphoto"><p style="padding-left: 100px"> song title... song length </p>
+            </div>
+        </div>
+    </div>
 
-This is home page (or replace this with any static code already written).
-
-
-
-
-
+    
+    
 </body>
+
+
+
+</html>
 
 
 
