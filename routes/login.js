@@ -54,11 +54,13 @@ exports.callback = function(req, res) {
     var scope = 'user-read-private user-read-email';
     var state = generateRandomString(16);
   
-    var authorizationCode = (new Buffer(client_id + ':' + client_secret).toString('base64'));
+    //var authorizationCode = (new Buffer(client_id + ':' + client_secret).toString('base64'));
     
-    console.log(authorizationCode);
+    //authorizationCode = "AQC1cW20eSVt5Aq9KcHZnG1VquZ1ufO7SWOnP_1qH0XJQpTfuv94b5wiPTjtd1OdAS607h5xFrotOVu_S4aJsZcOx-MrmR1-8-IaXbEr_f0SmqLb0qr1gOPBoR0DZ9gmTvrGozvgnT_G6I94KHTZq1YIF8ojFhlGwJvIYZWQF6sufPaMHUbpMk2d_uf7Hr0nuQwn33ZE7hD5ufMhv7-evvDsqRIQizoKaMNYUXW9V7cwFreMEDhmLg";
+
+    //console.log(authorizationCode);
   
-    spotifyApi.authorizationCodeGrant(authorizationCode)
+    /*spotifyApi.authorizationCodeGrant(authorizationCode)
     .then(function(data) {
       console.log('Retrieved access token', data.body['access_token']);
   
@@ -84,7 +86,7 @@ exports.callback = function(req, res) {
     .catch(function(err) {
       console.log('Something went wrong', err.message);
     });
-  
+  */
   
     /*spotifyApi.clientCredentialsGrant()
       .then(function(data) {
@@ -145,7 +147,34 @@ exports.callback = function(req, res) {
             json: true
           };
   
+          spotifyApi.setAccessToken(access_token);
+          spotifyApi.getMe()
+            .then(function(data){
+              // "Retrieved data for 
+              console.log('Retrieved data for ' + data.body['display_name']);
           
+              // "Email is 
+              console.log('Email is ' + data.body.email);
+          
+              // "Image URL is 
+              console.log('Image URL is ' + data.body.images[0].url);
+          
+              // "This user has a premium account"
+              console.log('This user has a ' + data.body.product + ' account');
+          })
+          .catch(function(err) {
+              console.log('Something went wrong', err.message);
+          });
+
+          spotifyApi.getMyRecentlyPlayedTracks()
+            .then(function(data){
+              console.log(data);
+              
+          })
+          .catch(function(err) {
+              console.log('Something went wrong', err.message);
+          });
+           
   
            // use the access token to access the Spotify Web API
            request.get(options, function(error, response, body) {

@@ -18,3 +18,4 @@ For the mood page, however, I decided that it may be best to focus solely on the
 
 ![Image of Playlist Page]()
 
+This is the playlist page. It will contain a generated playlist of songs to fit the chosen mood. Soon there will be buttons to allow users to save the playlist to Spotify, edit the playlist, and generate a new playlist.
