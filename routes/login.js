@@ -24,6 +24,13 @@ var generateRandomString = function(length) {
   
   var stateKey = 'spotify_auth_state';
 
+var millisToMinutesAndSeconds = function(millis) {
+  var minutes = Math.floor(millis / 60000);
+  var seconds = ((millis % 60000) / 1000).toFixed(0);
+  return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+};
+
+
 exports.signin =  function(req, res) {
 
     var state = generateRandomString(16);
@@ -117,7 +124,18 @@ exports.callback = function(req, res) {
 
           spotifyApi.getMyRecentlyPlayedTracks()
             .then(function(data){
-              console.log(data.body.items);
+              
+              for( e of data.body.items){
+                console.log(e.track.name + "-" + e.track.artists[0].name);
+                console.log(millisToMinutesAndSeconds(e.track.duration_ms));
+            
+
+
+
+                //console.log(e.track);
+
+              }
+              
               
           })
           .catch(function(err) {
