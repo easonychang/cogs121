@@ -13,7 +13,8 @@
     
     <!-- CSS -->
     <link href='/css/home.css' rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
    
@@ -57,7 +58,7 @@
         </div>
     </nav>
     
-    <h1 style="padding-top: 100; padding-bottom: 50; text-align: center; font-size: 
+    <h1 style="padding-top: 50; padding-bottom: 50; text-align: center; font-size: 
                100px;"> HAPPY </h1>
     
 
@@ -86,42 +87,28 @@
 
     </div>
 
-    <div class="songs">
 
-        <p id="name">Perfect</p>
-        <p id="artist">Ed Sheeran</p>
-        <p id="duration">3:40</p>
-
-    </div>
 
     <table class="table table-hover table-dark">
         <thead>
             <tr>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Song</th>
+            <th scope="col">Artist</th>
+            <th scope="col">Duration</th>
             </tr>
         </thead>
+
+
         <tbody>
-            <tr>
-            
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            </tr>
-            <tr>
-            
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            </tr>
-            <tr>
-            
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            </tr>
+            {{#each songs}}
+                <tr>
+                    <td id="name">{{name}}</td>
+                    <td id="artist">{{artist}}</td>
+                    <td id="duration">{{duration}}</td>
+                </tr>
+            {{/each}}
         </tbody>
-</table>
+    </table>
 
 
     </body>

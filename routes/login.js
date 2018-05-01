@@ -7,6 +7,10 @@ var SpotifyWebApi = require('spotify-web-api-node');
 var client_id = 'ab83d3f8c94d48758137e1d93d4b035d'; // Your client id
 var client_secret = '28cbb4c4255b42259338616057936c40'; // Your secret
 var redirect_uri = 'http://localhost:3000/callback'; // Your redirect uri
+
+const songsDB = require('../recentlyplayed.json');
+
+
 /**
  * Generates a random string containing numbers and letters
  * @param  {number} length The length of the string
@@ -125,17 +129,21 @@ exports.callback = function(req, res) {
           spotifyApi.getMyRecentlyPlayedTracks()
             .then(function(data){
               
+              
+
               for( e of data.body.items){
-                console.log(e.track.name + "-" + e.track.artists[0].name);
-                console.log(millisToMinutesAndSeconds(e.track.duration_ms));
-            
 
-
-
-                //console.log(e.track);
+                songObj = {
+                  'name': e.track.name,
+                  'artist': e.track.artists[0].name,
+                  'duration': millisToMinutesAndSeconds(e.track.duration_ms)
+                };
+                
+                songsDB.songs.push(songObj);
 
               }
               
+            
               
           })
           .catch(function(err) {
