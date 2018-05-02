@@ -15,6 +15,7 @@
     "cookie-parser": "^1.4.3",
     "express": "3.x",
     "express3-handlebars": "*",
+    "firebase": "^4.13.1",
     "lyricist": "^2.2.2",
     "mongodb": "*",
     "mongoose": "*",

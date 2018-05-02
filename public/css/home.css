@@ -54,15 +54,21 @@ ulbot{
     width: 60px;
 }
 
+.albumphoto{
+    border-radius: 50%;
+    width: 60px;
+}
+
+
 .songRecs{
     width: 100%;
     height: 100%;
     margin: 15;
 }
 
-.song{
+/*.song{
     width: 100%;
     height: 35%;
     
     overflow:auto
-}
+}*/

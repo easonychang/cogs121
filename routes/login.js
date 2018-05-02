@@ -2,13 +2,29 @@ var request = require('request'); // "Request" library
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 var SpotifyWebApi = require('spotify-web-api-node');
-
+const songsDB = require('../recentlyplayed.json'); //recentlyplayed json file
+var firebase = require('firebase');
 
 var client_id = 'ab83d3f8c94d48758137e1d93d4b035d'; // Your client id
 var client_secret = '28cbb4c4255b42259338616057936c40'; // Your secret
 var redirect_uri = 'http://localhost:3000/callback'; // Your redirect uri
 
-const songsDB = require('../recentlyplayed.json');
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBvWcAaeczS12VRY__XiOXQMBD6hd3dAH0",
+  authDomain: "spotimood.firebaseapp.com",
+  databaseURL: "https://spotimood.firebaseio.com",
+  projectId: "spotimood",
+  storageBucket: "spotimood.appspot.com",
+  messagingSenderId: "723908026631"
+};
+firebase.initializeApp(config);
+
+// Get a database reference to our blog
+var database = firebase.database();
+
+
 
 
 /**
@@ -131,19 +147,26 @@ exports.callback = function(req, res) {
               
               
 
-              for( e of data.body.items){
+              for( [index, e] of data.body.items.entries()){
+
+                console.log(e.track.album.images[2].url);
 
                 songObj = {
                   'name': e.track.name,
                   'artist': e.track.artists[0].name,
-                  'duration': millisToMinutesAndSeconds(e.track.duration_ms)
+                  'duration': millisToMinutesAndSeconds(e.track.duration_ms),
+                  'songid': e.track.id,
+                  'imageurl': e.track.album.images[2].url
                 };
                 
+                
+
                 songsDB.songs.push(songObj);
 
               }
               
-            
+              var ref = database.ref('recentlyplayed');
+              ref.set(songsDB);
               
           })
           .catch(function(err) {

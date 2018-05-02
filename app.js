@@ -12,7 +12,7 @@ var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 var SpotifyWebApi = require('spotify-web-api-node');
 
-
+//Spotify Client
 var client_id = 'ab83d3f8c94d48758137e1d93d4b035d'; // Your client id
 var client_secret = '28cbb4c4255b42259338616057936c40'; // Your secret
 var redirect_uri = 'http://localhost:3000/callback'; // Your redirect uri
@@ -20,9 +20,7 @@ var redirect_uri = 'http://localhost:3000/callback'; // Your redirect uri
 
 
 
-
-
-
+//Routes
 var index = require('./routes/index');
 var home = require('./routes/home');
 var mood = require('./routes/mood');
