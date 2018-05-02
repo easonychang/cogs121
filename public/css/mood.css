@@ -1,3 +1,4 @@
+
 .topnav{
     overflow: hidden;
     position: fixed;
@@ -10,17 +11,10 @@
     padding: 14px 16px;
     text-decoration: none;
 }
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
+.nav li {
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
 }
 
 ulbot{
@@ -38,4 +32,20 @@ ulbot{
     color: black;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+.mediumSeaGreen{
+background-color: mediumseagreen;
+}
+
+.navbarPadding{
+    padding: 1%;
+}
+
+.bottomPadding{
+    padding-bottom: 4%;
+}
+
+.iconPadding{
+    padding-left: 25%;
 }

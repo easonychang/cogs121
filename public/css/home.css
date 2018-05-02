@@ -11,18 +11,10 @@
     text-decoration: none;
 }
 
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    
-}
-
-li {
-    float: left;
+.nav li {
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
 }
 
 ulbot{
@@ -51,7 +43,7 @@ ulbot{
 
 .userphoto{
     border-radius: 50%;
-    width: 60px;
+    width: 80px;
 }
 
 .songRecs{
@@ -62,7 +54,30 @@ ulbot{
 
 .song{
     width: 100%;
-    height: 35%;
-    
+    height: 45%; 
     overflow:auto
+}
+
+.mediumSeaGreen{
+background-color: mediumseagreen;
+}
+
+.navbarPadding{
+    padding: 1%;
+}
+
+.bottomPadding{
+    padding-bottom: 4%;
+}
+
+.no-color-link{
+    color:black;
+}
+
+.iconPadding{
+    margin-left: 415px;
+}
+
+.songPadding{
+    padding-top: 4%;
 }
