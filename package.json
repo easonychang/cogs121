@@ -12,10 +12,15 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "express": "3.x",
     "express3-handlebars": "*",
+    "lyricist": "^2.2.2",
     "mongodb": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "querystring": "^0.2.0",
+    "request": "^2.85.0",
+    "spotify-web-api-node": "^3.0.0"
   },
   "engines": {
     "node": "8.9.x"

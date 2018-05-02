@@ -4,5 +4,5 @@
  */
 
 exports.view = function(req, res){
-  res.render('login-index');
-};
+    res.render('settings');
+  };

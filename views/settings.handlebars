@@ -5,34 +5,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    	<!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-	
-	<!-- Font Awesome -->
-	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href='/css/home.css' rel="stylesheet">
     
-    	<!-- CSS -->
-	<link href='playlists.css' rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+   
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
-	
-	<!-- JS -->
-    
+    <!-- JS -->
+    <script src='/js/getSong.js'></script>
+
     
 </head>
+
 <body>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">SpotiMood</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#"> SETTINGS <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/setting"><i class="fas fa-cog"></i></a>
+            
+            </div>
+        </div>
+    </nav>
+
     
-    <ul class ="topnav">
-        <li style="padding-left: 47%"> SETTINGS </li>
-        <li style="padding-left: 46%"><a href="settings.handlebars"><i class="fas fa-cog"></i></a></li>
-    </ul>
-    
-    <ulbot class>
-        <li><a href="mood.html"> <i class="far fa-smile"></i></a></li>
-        <li style="padding-left: 49%"><a href="home.handlebars"><i class="fas fa-home"></i></a></li>
-        <li style="padding-left: 47.5%"><a href="playlists.handlebars"><i class="fas fa-music"></i></a></li>
-    </ulbot>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/mood"> <i class="far fa-smile"></i> </a>
+            <a class="nav-item nav-link" href="/home"> <i class="fas fa-home"></i> </a>
+            <a class="nav-item nav-link" href="/playlists"><i class="fas fa-music"></i> </a>
+            
+            </div>
+        </div>
+    </nav>
     <p style="padding-top: 300"> under construction </p>
     </body>
 </html>
