@@ -4,6 +4,7 @@
  */
 //var songs = require('../recentlyplayed.json');
 var firebase = require('firebase');
+var Lyricist = require('lyricist/node6');
 
 // Initialize Firebase
 /*var config = {
@@ -20,6 +21,7 @@ firebase.initializeApp(config); */
 
 
 exports.view = function(req, res){
+
     var database = firebase.database();
     var ref = database.ref('recentlyplayed');
     var songs = " ";
