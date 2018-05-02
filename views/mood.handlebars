@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <title>Mood</title>
@@ -11,13 +12,14 @@
     <!-- Font Awesome -->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     
-    <!-- CSS -->
-    <link href='/css/home.css' rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href='/css/mood.css'>
+
+
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <!-- JS -->
@@ -29,22 +31,41 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top mediumSeaGreen">
+
+        
         <a class="navbar-brand" href="#">SpotiMood</a>
+<!--
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        
+       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#">MOOD<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="/setting"><i class="fas fa-cog"></i></a>
             
             </div>
         </div>
+    -->
     </nav>
 
+   <!--  <a class="nav-item nav-link" href="/setting"><i class="fas fa-cog"></i></a>
+ -->
+
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark mediumSeaGreen fixed-bottom center-block navbarPadding">
+
+    <div class="container-fluid">
+    
+        <ul class="navbar-nav nav">
+            <li><a href="/mood"><i class="far fa-smile no-color-link"></i></a></li>
+            <li><a href="/home"><i class="fas fa-home no-color-link iconPadding"></i></a></li>
+            <li><a href="/playlists"><i class="fas fa-music no-color-link iconPadding"></i></a></li>
+            <li><a href="/setting"><i class="fas fa-cog no-color-link iconPadding"></i></a></li>
+        </ul>
+    </div>
+        <!--
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,13 +77,14 @@
             
             </div>
         </div>
+    -->
     </nav>
     
-    <h1 style="padding-top: 50; padding-bottom: 50; text-align: center; font-size: 
+    <h1 style="padding-top: 50; padding-bottom: 25; text-align: center; font-size: 
                100px;"> HAPPY </h1>
     
 
-    <div class = "container">
+    <div class = "container-fluid bottomPadding">
     
       <p class="w3-wide" style="padding-left: 2%">Joy</p>
         <div class="w3-light-grey">
@@ -109,6 +131,9 @@
             {{/each}}
         </tbody>
     </table>
+
+    <div class="fixedOffsetPadding">
+    </div>
 
 
     </body>

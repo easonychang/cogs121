@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+/* top navigation bar */
+
 .topnav{
     overflow: hidden;
     position: fixed;
@@ -38,4 +41,46 @@ ulbot{
     color: black;
     padding: 14px 16px;
     text-decoration: none;
+=======
+.topnav{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: mediumseagreen;
+
+    display: inline-block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+ulbot{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: mediumseagreen;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+    
+    display: inline-block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+>>>>>>> 0e2d21140663c8f1436d42ce603f48949d9bf2b1
 }

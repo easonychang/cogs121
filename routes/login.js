@@ -156,7 +156,7 @@ exports.callback = function(req, res) {
                   'artist': e.track.artists[0].name,
                   'duration': millisToMinutesAndSeconds(e.track.duration_ms),
                   'songid': e.track.id,
-                  'imageurl': e.track.album.images[2].url
+                  'imageurl': e.track.album.images[1].url
                 };
                 
                 
