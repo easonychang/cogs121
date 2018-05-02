@@ -2,13 +2,13 @@ Milestone 4 ()
 ====
 
 ## Home Page UI Improvement
-![Image of Home Page]()
+![Image of Home Page](https://github.com/easonychang/cogs121/blob/master/public/images/Milestone4/homepage.png)
 
 
 This screenshot shows two things. I have taken out the settings cog from the top navbar, leaving only the brand name of our product for a cleaner feeling and moved it to the bottom. The navbar is now bootstrap for a cleaner look as well. I have also changed the divs holding the songs to be columns so that there are two displayed side by side. This compensates for some of the white space, especially in desktop view, and more information can be presented at once. In future iterations I will continue to improve on this. 
 
 ## Playlist Page UI Improvement
-![Image of Playlist Page]()
+![Image of Playlist Page](https://github.com/easonychang/cogs121/blob/master/public/images/Milestone4/playlistpage.png)
 
 
 The playlist page UI has been completely changed. Previously, songs were listed out one by one. Now they are contained to their own categories which in future milestones will lead to a separate page with songs curated for the user. This avoids overwhelming the user with information, and the user will be able to clearly pick a playlist for their particular mood, unlike the previous iteration which would just have a list of songs. 
