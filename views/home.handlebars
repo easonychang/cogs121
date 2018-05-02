@@ -5,74 +5,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    	<!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+	
 	
 	<!-- Font Awesome -->
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     
-    	<!-- CSS -->
-	<link href='/css/index.css' rel="stylesheet">
+
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link href='/css/home.css' rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <!-- JS -->
+    <script src='/js/getSong.js'></script>
+
     
 </head>
 <body>
-    
-    <ul class ="topnav">
-        <li style="padding-left: 50%"> HOME </li>
-        <li style="padding-left: 45.5%"><a href="settings.handlebars"><i class="fas fa-cog"></i></a></li>
-    </ul>
-    
-    <ulbot class>
-        <li><a href="mood.html"> <i class="far fa-smile"></i></a></li>
-        <li style="padding-left: 49%"><a href="index.handlebars"><i class="fas fa-home"></i></a></li>
-        <li style="padding-left: 47.5%"><a href="playlists.handlebars"><i class="fas fa-music"></i></a></li>
-    </ulbot>
-    <div style="padding-bottom: 60px;">
-    </div>
-    
-    <div class= "welcome">
-			<div id="user">
-				<img sr class="userphoto">
-                <i class="fas fa-user-circle fa-3x" aria-hidden='true' id="icon"></i>
-                <h4 style="padding-left: 15"> Welcome back user!</h4>
-                <h5 style="padding-left: 15; padding-bottom: 30"> Why so happy?</h5>
-            </div>
-            
-        <div class="songRecs">
-            <div class= "song">
-                <img src="" class = "userphoto"><p style="padding-left: 100px">  song title... song length </p>
-            </div>
-            <div class= "song">
-                <img src="" class = "userphoto"><p style="padding-left: 100px"> song title... song length </p>
-            </div>
-            <div class= "song">
-                <img src="" class = "userphoto"><p style="padding-left: 100px"> song title... song length </p>
-            </div>
-            <div class= "song">
-                <img src="" class = "userphoto"><p style="padding-left: 100px"> song title... song length </p>
-            </div>
-        </div>
-    </div>
-    
-</body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top mediumSeaGreen">
+
+        
         <a class="navbar-brand" href="#">SpotiMood</a>
+<!--
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        
+       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">HOME <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="#">MOOD<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="/setting"><i class="fas fa-cog"></i></a>
             
             </div>
         </div>
+    -->
     </nav>
 
+   <!--  <a class="nav-item nav-link" href="/setting"><i class="fas fa-cog"></i></a>
+ -->
+
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark mediumSeaGreen fixed-bottom center-block navbarPadding">
+
+    <div class="container-fluid">
+    
+        <ul class="nav navbar-nav">
+            <li><a href="/mood"><i class="far fa-smile no-color-link"></i></a></li>
+            <li><a href="/home"><i class="fas fa-home no-color-link"></i></li>
+            <li><a href="/playlists"><i class="fas fa-music no-color-link"></i></a></li>
+        </ul>
+    </div>
+        <!--
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -84,11 +75,14 @@
             
             </div>
         </div>
+    -->
     </nav>
+    
     
 
     
-    <div class="container">
+    <div class="container" style="padding-top: 7%;">
+
     <div class= "welcome">
 			<div id="user">
 				<img sr class="userphoto">
@@ -115,4 +109,14 @@
     </div>
 
     </div>
+    
+    
+</body>
+
+
+
+</html>
+
+
+
 </html>
