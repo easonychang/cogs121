@@ -47,7 +47,7 @@ background-color: mediumseagreen;
 }
 
 .iconPadding{
-    margin-left: 415px;
+    margin-left: 350px;
 }
 
 .playlistPadding{
@@ -55,7 +55,8 @@ background-color: mediumseagreen;
 }
 
 .playlistPadding2{
-    padding-top padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .playlistPaddingBot{

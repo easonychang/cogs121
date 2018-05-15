@@ -21,8 +21,8 @@ nav ul{
     margin: 0 2px;
     padding: 0;
     display: flex;
-    justify-content: space-between;
-  }
+    
+  } 
 
 nav li {
     display: inline;

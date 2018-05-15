@@ -2,7 +2,6 @@
 /*
  * GET home page.
  */
-//var songs = require('../recentlyplayed.json');
 var firebase = require('firebase');
 var Lyricist = require('lyricist/node6');
 
@@ -14,22 +13,9 @@ var natural_language_understanding = new NaturalLanguageUnderstandingV1({
 });
 
 
-
-// Initialize Firebase
-/*var config = {
-  apiKey: "AIzaSyBvWcAaeczS12VRY__XiOXQMBD6hd3dAH0",
-  authDomain: "spotimood.firebaseapp.com",
-  databaseURL: "https://spotimood.firebaseio.com",
-  projectId: "spotimood",
-  storageBucket: "spotimood.appspot.com",
-  messagingSenderId: "723908026631"
-};
-firebase.initializeApp(config); */
-
-// Get a database reference to our blog
-
-
 exports.view = function(req, res){
+    const songIndex = req._parsedOriginalUrl.query;
+    
 
     var database = firebase.database();
     var ref = database.ref('recentlyplayed');
@@ -37,18 +23,16 @@ exports.view = function(req, res){
     ref.on('value', snap => {
       
       songs = snap.val();
-      //console.log(songs);
-
-      res.render('mood', songs);
+      
     });
 
-    //console.log(songs.songs[0].name);
+    console.log(songs.songs[songIndex].name);
 
     //GET lyrics
-    /*var accessToken = 'Dd3-2dZAw-MZnId7W0V-cSHAdRP1mR72k3YE3CKTqZj6PHan4NlotPg3VW5X_yVN';
+    var accessToken = 'Dd3-2dZAw-MZnId7W0V-cSHAdRP1mR72k3YE3CKTqZj6PHan4NlotPg3VW5X_yVN';
     const lyricist = new Lyricist(accessToken);
-    var songName = songs.songs[1].name.split("-")[0];
-    var query = songName  + " " + songs.songs[1].artist;
+    var songName = songs.songs[songIndex].name.split("-")[0];
+    var query = songName  + " " + songs.songs[songIndex].artist;
     //console.log(query);
     lyricist.search(query)
       .then(response => {
@@ -61,7 +45,7 @@ exports.view = function(req, res){
         lyricist.song(songID, { fetchLyrics: true })
         .then(songlyric => {
           
-          console.log(songlyric.lyrics);
+          //console.log(songlyric.lyrics);
 
 
           var parameters = {
@@ -71,23 +55,34 @@ exports.view = function(req, res){
                 'document': true
               }
             }
-          }
+          };
           
           natural_language_understanding.analyze(parameters, function(err, response) {
-            if (err)
-              console.log('error:', err);
-            else
-              console.log(JSON.stringify(response, null, 2));
+            if (err){
+                console.log('error:', err);
+            }
+            else {
+                //console.log(JSON.stringify(response, null, 2));
+
+                const displayObj = {
+                  'emotions': response.emotion.document.emotion,
+                  'lyrics': parameters.text
+                };
+
+                ///console.log(displayObj);
+
+                res.send(displayObj);
+            }
           });
         });
         
+        
 
-      });*/
+      });
 
 
 
     
+
     
   };
-
-
