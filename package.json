@@ -21,7 +21,8 @@
     "mongoose": "*",
     "querystring": "^0.2.0",
     "request": "^2.85.0",
-    "spotify-web-api-node": "^3.0.0"
+    "spotify-web-api-node": "^3.0.0",
+    "watson-developer-cloud": "^3.4.0"
   },
   "engines": {
     "node": "8.9.x"

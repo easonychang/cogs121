@@ -28,6 +28,7 @@ var setting = require('./routes/setting');
 var playlists = require('./routes/playlists');
 var login = require('./routes/login');
 var getSong = require('./routes/getSong');
+var dl = require('./routes/displaylyrics');
 
 // Example route
 // var user = require('./routes/user');
@@ -60,6 +61,7 @@ app.get('/mood', mood.view);
 app.get('/setting', setting.view);
 app.get('/playlists', playlists.view);
 app.get('/getSong', getSong.view);
+app.get('/displaylyrics', dl.view);
 // Example route
 // app.get('/users', user.list);
 

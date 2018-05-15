@@ -24,6 +24,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <!-- JS -->
     <script src='/js/getSong.js'></script>
+    <script src='/js/displayLyrics.js'></script>
 
     
 </head>
@@ -113,7 +114,7 @@
 
     <table class="table table-hover table-dark">
         <thead>
-            <tr>
+            <tr id="not_a_song">
             <th scope="col">Song</th>
             <th scope="col">Artist</th>
             <th scope="col">Duration</th>
@@ -123,7 +124,7 @@
 
         <tbody>
             {{#each songs}}
-                <tr>
+                <tr id={{@index}}>
                     <td id="name">{{name}}</td>
                     <td id="artist">{{artist}}</td>
                     <td id="duration">{{duration}}</td>

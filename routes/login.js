@@ -137,14 +137,13 @@ exports.callback = function(req, res) {
           
               // "This user has a premium account"
               console.log('This user has a ' + data.body.product + ' account');
-          })
+            })
           .catch(function(err) {
               console.log('Something went wrong', err.message);
           });
 
           spotifyApi.getMyRecentlyPlayedTracks()
             .then(function(data){
-              
               
 
               for( [index, e] of data.body.items.entries()){
@@ -159,8 +158,6 @@ exports.callback = function(req, res) {
                   'imageurl': e.track.album.images[1].url
                 };
                 
-                
-
                 songsDB.songs.push(songObj);
 
               }
