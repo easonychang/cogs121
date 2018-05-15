@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 
     $('tr').click(function(e){
-        e.preventDefault();
+        //e.preventDefault();
         
         if(this.id != "not_a_song"){
             console.log(this.id);
@@ -24,3 +24,4 @@ $(document).ready(function(){
     });
 
 });
+
