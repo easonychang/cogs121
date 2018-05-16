@@ -14,7 +14,8 @@ $(function(){
        //   var getIdFromRow = $(event.target).closest('tr').data('id');
         //make your ajax call populate items or what even you need
         //$(this).find('#name').html($('<b> Order Id selected: ' + getIdFromRow  + '</b>'))
-        console.log("adfadwf");
+        $('.modal-title').text("");
+        $('.modal-body').html("<br><br><br><br><br><br><div id='loader'><div>");
     });
 });
 
