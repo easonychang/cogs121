@@ -11,13 +11,19 @@
         white-space: nowrap;
         width: 500px;
       }
+
     </style>
+        <link rel="stylesheet" href='/css/login.css'>
+
   </head>
 
   <body>
-    <div class="container">
-      <div id="login">
-        <h1>Log in with Spotify</h1>
+    <div style="padding-top: 50px">
+
+    <div class="container form">
+      <div id="login" class ="textCenter">
+        <h1>Spotimood</h1>
+        <h4>Welcome Back!</h4>
         <a href="/login" class="btn btn-primary">Log in with Spotify</a>
         <a href="/home" class="btn btn-primary">Home</a>
       </div>
@@ -25,11 +31,9 @@
         <div id="user-profile">
         </div>
         
-        </div>
       </div>
-    </div>
 
-    <div class="container">
+      <div class="container">
       <h1>LogIn Info: {{display_name}}</h1>
       <div class="media">
         <div class="pull-left">
@@ -39,14 +43,19 @@
           <dl class="dl-horizontal">
             <dt>Display name</dt><dd class="clearfix">{{display_name}}</dd>
             <dt>Id</dt><dd>{{id}}</dd>
-			      <dt>Email</dt><dd>{{email}}</dd>
+            <dt>Email</dt><dd>{{email}}</dd>
             <dt>Followers</dt><dd>{{followers}}</dd>
             <dt>Country</dt><dd>{{country}}</dd>
           </dl>
         </div>
       </div>
-	</div>
-    
+    </div>   
+  </div>
+ </div>
+
+
+
+
 
 
     
