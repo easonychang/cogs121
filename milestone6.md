@@ -1,7 +1,7 @@
 ## UI Improvement (Screenshots + Explaination)
 
 ### Login Page
-![Image of Login Page](https://github.com/easonychang/cogs121/blob/master/public/images/Milestone6/login.png)
+![Image of Login Page](https://github.com/easonychang/cogs121/blob/master/public/images/Milestone6/login.PNG)
 
 ### Mood Page
 ![Image of Mood Page](https://github.com/easonychang/cogs121/blob/master/public/images/Milestone6/mood.png)
