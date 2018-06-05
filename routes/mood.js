@@ -5,6 +5,8 @@
 //var songs = require('../recentlyplayed.json');
 var firebase = require('firebase');
 var Lyricist = require('lyricist/node6');
+var overallEmo = require('../overallEmo.json');
+
 
 var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 var natural_language_understanding = new NaturalLanguageUnderstandingV1({
@@ -13,20 +15,10 @@ var natural_language_understanding = new NaturalLanguageUnderstandingV1({
   'version': '2018-03-16'
 });
 
-
-
-// Initialize Firebase
-/*var config = {
-  apiKey: "AIzaSyBvWcAaeczS12VRY__XiOXQMBD6hd3dAH0",
-  authDomain: "spotimood.firebaseapp.com",
-  databaseURL: "https://spotimood.firebaseio.com",
-  projectId: "spotimood",
-  storageBucket: "spotimood.appspot.com",
-  messagingSenderId: "723908026631"
-};
-firebase.initializeApp(config); */
-
-// Get a database reference to our blog
+exports.viewB = function(req, res){
+  console.log(overallEmo.overallEmo[0])
+  res.send(overallEmo.overallEmo[0]);
+}
 
 
 exports.view = function(req, res){
@@ -42,52 +34,6 @@ exports.view = function(req, res){
       res.render('mood', songs);
     });
 
-    //console.log(songs.songs[0].name);
-
-    //GET lyrics
-    /*var accessToken = 'Dd3-2dZAw-MZnId7W0V-cSHAdRP1mR72k3YE3CKTqZj6PHan4NlotPg3VW5X_yVN';
-    const lyricist = new Lyricist(accessToken);
-    var songName = songs.songs[1].name.split("-")[0];
-    var query = songName  + " " + songs.songs[1].artist;
-    //console.log(query);
-    lyricist.search(query)
-      .then(response => {
-        //console.log(response[0].full_title);
-        console.log(response[0].id);
-
-        var songID = response[0].id;
-
-
-        lyricist.song(songID, { fetchLyrics: true })
-        .then(songlyric => {
-          
-          console.log(songlyric.lyrics);
-
-
-          var parameters = {
-            'text': songlyric.lyrics,
-            'features': {
-              'emotion': {
-                'document': true
-              }
-            }
-          }
-          
-          natural_language_understanding.analyze(parameters, function(err, response) {
-            if (err)
-              console.log('error:', err);
-            else
-              console.log(JSON.stringify(response, null, 2));
-          });
-        });
-        
-
-      });*/
-
-
-
-    
-    
   };
 
 

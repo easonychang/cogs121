@@ -58,6 +58,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/home', home.view);
 app.get('/mood', mood.view);
+app.get('/moods', mood.viewB);
 app.get('/setting', setting.view);
 app.get('/playlists', playlists.view);
 app.get('/getSong', getSong.view);
@@ -69,8 +70,6 @@ app.get('/displaylyrics', dl.view);
 app.use(express.static(__dirname + '/public')).use(cookieParser());
 
 app.get('/login', login.signin);
-
-app.all('/callback', login.callback);
 
 app.get('/refresh_token', function(req, res) {
 
