@@ -36,41 +36,19 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top mediumSeaGreen">
 
         
-        <a class="navbar-brand" href="#">SpotiMood</a>
+        <a class="navbar-brand" href="/login">SpotiMood</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul class="navbar-nav nav nav-pills nav-fill">
-            <li class="nav-item active"><a href="/mood"><i class="far fa-smile no-color-link"></i></a></li>
-            <li class="nav-item"><a href="/login"><i class="fas fa-home no-color-link iconPadding"></i></a></li>
-            <li class="nav-item"><a href="/home"><i class="fas fa-sign-out-alt no-color-link iconPadding"></i></a></li>
-        </ul>
-            
-            </div>
-        </div>
-   
+            <div class="dropdown"  type="button" style="float: right;">
+                <button class="btn btn-secondary dropdown-toggle mediumSeaGreen noBorder" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="  true" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/mood"> Mood <i class="far fa-smile no-color-link iconPadding"></i></a>
+                    <a class="dropdown-item" href="/login">Home <i class="fas fa-home no-color-link iconPadding"></i></a>
+                    <a class="dropdown-item" href="/home">Logout<i class=" fas fa-sign-out-alt no-color-link iconPadding"></i></a>
+                </div>
+            </div>   
     </nav>
-
-   <!--  <a class="nav-item nav-link" href="/setting"><i class="fas fa-cog"></i></a>
- -->
-
-    
-    <nav class="navbar navbar-expand-lg navbar-dark mediumSeaGreen fixed-bottom center-block navbarPadding">
-
-    <div class="container-fluid">
-    
-        <ul class="navbar-nav nav nav-pills nav-fill">
-            <li class="nav-item active"><a href="/mood"><i class="far fa-smile no-color-link"></i></a></li>
-            <li class="nav-item"><a href="/home"><i class="fas fa-home no-color-link iconPadding"></i></a></li>
-        </ul>
-    </div>
-
-    </nav>
-    
-    
 
     
     <div class="container" style="padding-top: 7%;">
@@ -80,7 +58,7 @@
             <img class="userphoto" src="{{images}}">
             <h4 > Welcome back {{email}}!</h4>
             <h5> How are you feeling?</h5>
-            <a href="/getSong" class="btn btn-primary">Get Most Recent Song!</a>
+            <a href="/getSong" id= "getSong" class="btn btn-primary">Get Most Recent Song!</a>
         </div>
             
         <div class="songRecs">

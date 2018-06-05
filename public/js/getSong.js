@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
 
-    $('.btn').click(function(e){
+    $('#getSong').click(function(e){
         e.preventDefault();
 
         $('.card').show();
