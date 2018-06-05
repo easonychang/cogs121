@@ -23,6 +23,9 @@ exports.viewB = function(req, res){
 
 exports.view = function(req, res){
 
+    /**
+     * Render the songs in a table form, send it to frontend.
+     */
     var database = firebase.database();
     var ref = database.ref('recentlyplayed');
     var songs = " ";

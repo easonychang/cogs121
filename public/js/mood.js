@@ -4,7 +4,11 @@ $(document).ready(function(){
 
     $.get('/moods', function(mood){
         console.log(mood);
-    
+        
+
+        /**
+         * Averaging out the overall mood and visual display it with Plotly
+         */
         mood.anger = mood.anger/20 *100;
         mood.disgust = mood.disgust/20*100;
         mood.fear = mood.fear/20 *100;

@@ -17,5 +17,15 @@ $(function(){
         $('.modal-title').text("");
         $('.modal-body').html("<br><br><br><br><br><br><div id='loader'><div>");
     });
+
+    // Get the modal
+    var modal = document.getElementById('lyricsModal');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            $('#lyricsModal').modal('hide')
+        }
+    }
 });
 

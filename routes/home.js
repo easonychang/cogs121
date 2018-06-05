@@ -51,6 +51,9 @@ var generateRandomString = function(length) {
 var stateKey = 'spotify_auth_state';
 
 exports.view = function(req, res){
+  /**
+   * using the spotify web api wrapper
+   */
   var spotifyApi = new SpotifyWebApi({
     clientId: client_id,
     clientSecret: client_secret,
@@ -103,6 +106,10 @@ exports.view = function(req, res){
         };
 
         spotifyApi.setAccessToken(access_token);
+
+        /**
+         * Getting the users' basic information
+         */
         spotifyApi.getMe()
           .then(function(data){
             // "Retrieved data for 
@@ -121,6 +128,9 @@ exports.view = function(req, res){
             console.log('Something went wrong', err.message);
         });
 
+        /**
+         * Getting the users' most recently played 20 songs, and populate the database
+         */
         spotifyApi.getMyRecentlyPlayedTracks()
           .then(function(data){
             
@@ -180,6 +190,10 @@ exports.view = function(req, res){
 
     });
   }
+
+    /**
+     * Getting the overall emotions of all the songs in the database
+     */
     var ref = database.ref('recentlyplayed');
     var songs = " ";
     ref.on('value', snap => {
@@ -212,8 +226,6 @@ exports.view = function(req, res){
             .then(songlyric => {
               
               //console.log(songlyric.lyrics);
-    
-    
               var parameters = {
                 'text': songlyric.lyrics,
                 'features': {
@@ -230,14 +242,12 @@ exports.view = function(req, res){
                 else {
                     //console.log(JSON.stringify(response, null, 2));
     
-                    
                     emotion.sadness += response.emotion.document.emotion.sadness;
                     emotion.joy += response.emotion.document.emotion.joy;
                     emotion.fear+= response.emotion.document.emotion.fear;
                     emotion.disgust+= response.emotion.document.emotion.disgust;
                     emotion.anger+= response.emotion.document.emotion.anger;
                     
-                   
                     overallEmo.overallEmo.push(emotion);
                 }
 
