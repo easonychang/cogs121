@@ -91,7 +91,7 @@ ulbot{
 }
 
 .iconPadding{
-    margin-left: 350px;
+    margin-left: 20px;
 }
 
 .songPadding{
@@ -104,4 +104,8 @@ ulbot{
 
 .card{
     display: none;
+}
+
+.noBorder{
+    border:none;
 }
