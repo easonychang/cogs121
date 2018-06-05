@@ -2,12 +2,7 @@ $(document).ready(function(){
 
     console.log("javascript connected from DL");
 
-
-
     $('tr').click(function(e){
-        
-        
-   
         //console.log(e.currentTarget.childNodes[1].innerText);
         
         if(this.id != "not_a_song"){
@@ -70,8 +65,6 @@ $(document).ready(function(){
 
                 }
 
-                
-
                 const emotionStr =  "<p> sadness: " + displayObj.emotions.sadness + "<br>" +
                                     "joy: " + displayObj.emotions.joy + "<br>" +
                                     "fear: " + displayObj.emotions.fear + "<br>" +
@@ -80,7 +73,7 @@ $(document).ready(function(){
 
                 //console.log(e.currentTarget.childNodes[1].innerText)
                 $('.modal-title').text(e.currentTarget.childNodes[1].innerText);
-                $('.modal-body').html("<div id='dataVis' style=' height: 400px; '></div>" + emotionStr +displayObj.lyrics.replace(/(?:\r\n|\r|\n)/g, '<br>'));
+                $('.modal-body').html("<div id='dataVis' style=' height: 400px; '></div>" +displayObj.lyrics.replace(/(?:\r\n|\r|\n)/g, '<br>'));
                 
                 //console.log(displayObj);
                 console.log(displayObj.emotions);
@@ -88,12 +81,6 @@ $(document).ready(function(){
 
             });
         }
-        
-
-        
-
-
     });
-
 });
 

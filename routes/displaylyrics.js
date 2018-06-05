@@ -12,7 +12,6 @@ var natural_language_understanding = new NaturalLanguageUnderstandingV1({
   'version': '2018-03-16'
 });
 
-
 exports.view = function(req, res){
     const songIndex = req._parsedOriginalUrl.query;
     
@@ -34,20 +33,19 @@ exports.view = function(req, res){
     var songName = songs.songs[songIndex].name.split("-")[0];
     var query = songName  + " " + songs.songs[songIndex].artist;
     //console.log(query);
+
+    //Searching for the song
     lyricist.search(query)
       .then(response => {
         //console.log(response[0].full_title);
         console.log(response[0].id);
-
         var songID = response[0].id;
-
-
         lyricist.song(songID, { fetchLyrics: true })
         .then(songlyric => {
           
           //console.log(songlyric.lyrics);
 
-
+          /* Parameters passed in to the natural language process*/
           var parameters = {
             'text': songlyric.lyrics,
             'features': {
@@ -64,6 +62,7 @@ exports.view = function(req, res){
             else {
                 //console.log(JSON.stringify(response, null, 2));
 
+                /*Pairing emotions with the lyrics, send it to the frontend*/
                 const displayObj = {
                   'emotions': response.emotion.document.emotion,
                   'lyrics': parameters.text

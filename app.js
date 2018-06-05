@@ -24,8 +24,6 @@ var redirect_uri = 'http://localhost:3000/callback'; // Your redirect uri
 var index = require('./routes/index');
 var home = require('./routes/home');
 var mood = require('./routes/mood');
-var setting = require('./routes/setting');
-var playlists = require('./routes/playlists');
 var login = require('./routes/login');
 var getSong = require('./routes/getSong');
 var dl = require('./routes/displaylyrics');
@@ -59,8 +57,6 @@ app.get('/', index.view);
 app.get('/home', home.view);
 app.get('/mood', mood.view);
 app.get('/moods', mood.viewB);
-app.get('/setting', setting.view);
-app.get('/playlists', playlists.view);
 app.get('/getSong', getSong.view);
 app.get('/displaylyrics', dl.view);
 // Example route
