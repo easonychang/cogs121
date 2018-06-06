@@ -33,23 +33,20 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top mediumSeaGreen">
 
-        <a class="navbar-brand" href="#">SpotiMood</a>
-    </nav>
-
-    <nav class="navbar navbar-expand-lg navbar-dark mediumSeaGreen fixed-bottom center-block navbarPadding">
-
-    <div class="container-fluid">
-    
-        <ul class="navbar-nav nav nav-fill">
-            <li><a href="/mood"><i class="far fa-smile no-color-link"></i></a></li>
-            <li><a href="/login"><i class="fas fa-home no-color-link iconPadding"></i></a></li>
-            <li><a href="/playlists"><i class="fas fa-music no-color-link iconPadding"></i></a></li>
-            <li><a href="/setting"><i class="fas fa-cog no-color-link iconPadding"></i></a></li>
-        </ul>
-    </div>
         
+        <a class="navbar-brand" href="/login">SpotiMood</a>
+
+            <div class="dropdown"  type="button" style="float: right;">
+                <button class="btn btn-secondary dropdown-toggle mediumSeaGreen noBorder" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="  true" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/mood"> Mood <i class="far fa-smile no-color-link iconPadding"></i></a>
+                    <a class="dropdown-item" href="/login">Home <i class="fas fa-home no-color-link iconPadding"></i></a>
+                    <a class="dropdown-item" href="/home">Logout<i class=" fas fa-sign-out-alt no-color-link iconPadding"></i></a>
+                </div>
+            </div>   
     </nav>
-    
 
     
     <div class ="container-fluid">

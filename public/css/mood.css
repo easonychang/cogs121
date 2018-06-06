@@ -11,6 +11,14 @@
     padding: 14px 16px;
     text-decoration: none;
 }
+nav ul{
+    list-style: none;
+    margin: 0 2px;
+    padding: 0;
+    display: flex;
+    
+  } 
+
 .nav li {
     display: inline-block;
     white-space: nowrap;
@@ -94,3 +102,37 @@ background-color: mediumseagreen;
     from{ bottom:-100px; opacity:0 } 
     to{ bottom:0; opacity:1 }
   }
+
+.noBorder{
+    border:none;
+}
+
+.no-color-link{
+    color:black;
+}
+
+.iconPadding{
+    margin-left: 20px;
+}
+
+.songPadding{
+    padding-top: 4%;
+}
+
+.sticky
+{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.modal {
+    overflow: hidden;
+}
+.modal .modal-body {
+    height: 570px;
+    overflow: auto;
+}
+.modal .modal-fixed {
+    position: fixed;
+    background-color:red;
+}
